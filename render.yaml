@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: tobacco-tax-app
+    env: python
+    region: singapore
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    runtime: python
+    branch: main
+    autoDeploy: true

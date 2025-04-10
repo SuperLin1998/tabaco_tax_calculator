@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>菸捐計算機</title>
+</head>
+<body>
+    <h1>台灣菸捐計算機</h1>
+    <form method="post">
+        <label>請輸入增加菸捐金額（元）：</label>
+        <input type="number" step="0.1" name="increase" required>
+        <button type="submit">計算</button>
+    </form>
+
+    {% if result %}
+        {% if result.error %}
+            <p style="color:red;">{{ result.error }}</p>
+        {% else %}
+            <h2>計算結果</h2>
+            <p>香菸年使用量：{{ result.quantity }} 百萬包</p>
+            <p>香菸每包均價：{{ result.price }} 元/包</p>
+            <p>稅收：{{ result.tax }} 億元</p>
+        {% endif %}
+    {% endif %}
+</body>
+<img src="{{ url_for('static', filename='pic1.png') }}"
+     alt=""
+     style="display:block; margin:left; width:40%;">
+
+</html>
