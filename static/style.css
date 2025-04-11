@@ -38,7 +38,7 @@ body {
 
 .section-calculator h1,
 .section-info h2 {
-    font-size: 5rem;          /* 標題變大 */
+    font-size: 3rem;          /* 標題變大 */
     color: #004080;           /* 深藍色 */
     font-weight: bold;
     margin-bottom: 1rem;
@@ -48,7 +48,7 @@ body {
 .section-calculator input,
 .section-calculator button,
 .section-info p {
-    font-size: 3rem;        /* 內文大一點 */
+    font-size: 2.5rem;        /* 內文大一點 */
     color: #333;
     line-height: 1.6;
 }
