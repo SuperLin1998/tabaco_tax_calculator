@@ -92,18 +92,6 @@ body {
     overflow: hidden;
 }
 
-/* 固定圖片在右側並垂直置中 */
-.info-img-fixed {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 60%;    /* 調整圖片最大寬度 */
-    height: auto;
-    object-fit: contain;
-}
-
-
 /* 手機、平板尺寸自動調整排版 */
 @media (max-width: 1024px) {
     .container {
