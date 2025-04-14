@@ -1,4 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify, url_for
+import os
+import random
 
 app = Flask(__name__)
 
@@ -21,11 +23,19 @@ def index():
         try:
             increase = float(request.form["increase"])
             q, p, tax = calculate_total_tax(increase)
+            
+            # 隨機選擇一張圖片
+            image_list = [f"mygo{i}.jpg" for i in range(1, 20)]
+            chosen = random.choice(image_list)
+            image_url = url_for('static', filename=chosen)
+
+            # 將圖片網址加入結果中
             result = {
                 "increase": increase,
                 "quantity": q,
                 "price": p,
-                "tax": tax
+                "tax": tax,
+                "image_url": image_url  # 新增圖片欄位
             }
         except ValueError:
             result = {"error": "請輸入有效數字。"}
