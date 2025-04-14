@@ -25,9 +25,15 @@
                         <p>香菸年使用量：{{ result.quantity }} 百萬包</p>
                         <p>香菸每包均價：{{ result.price }} 元/包</p>
                         <p>稅收：{{ result.tax }} 億元</p>
+        
+                    <!-- 顯示隨機圖片 -->
+                        <div id="imageContainer" class="random-image-block">
+                            <img id="randomImage" src="{{ result.image_url }}" alt="隨機圖片">
+                        </div>
                     </div>
                 {% endif %}
             {% endif %}
+        
         </div>
 
         <!-- 區塊二：公式 -->
